@@ -13,3 +13,5 @@ Ui:ssa on nyt eri näkymiä, database pystyssä, usereille ainakin. En tosin lö
 
 -----------------------------------------------------------------------------------------------
 
+Päivä: 7.4.
+11.20

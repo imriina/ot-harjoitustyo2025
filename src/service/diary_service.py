@@ -1,19 +1,31 @@
 from entities.user import User
-from repository.user_repo import UserRepository
+from repository.user_repository import UserRepository
 from database_connection import get_database_connection
 
+from repository.user_repository import (
+    user_repository as default_user_repository
+)
+
+class InvalidCredentialsError(Exception):
+    pass
 
 class DiaryService:
-    def __init__(self, user_repo):
-        self._user_repo = user_repo
+    def __init__(self, user_repository=default_user_repository):
+        self._user_repository = user_repository
         self._user = None
     
-    def create_new_user(self, username, login=True):
-        user = self._user_repo.create(User(username))
-
-        if login:
-            self._user = user
+    def create_new_user(self, username):
+        user = self._user_repository.create(User(username))
 
         return user
 
-diary_service = DiaryService(UserRepository(get_database_connection()))
+    def login(self, username):
+        
+        user = self._user_repository.find_by_username(username)
+        if not user:
+            raise InvalidCredentialsError("Invalid username or password")
+
+        self._user = user        
+        return user
+
+diary_service = DiaryService()

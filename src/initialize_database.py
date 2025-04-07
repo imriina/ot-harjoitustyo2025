@@ -2,29 +2,41 @@ from database_connection import get_database_connection
 
 
 def drop_tables(connection):
+    """Poistaa tietokantataulut.
+
+    Args:
+        connection: Tietokantayhteyden Connection-olio
+    """
+
     cursor = connection.cursor()
 
-    cursor.execute('''
+    cursor.execute("""
         drop table if exists users;
-    ''')
+    """)
 
     connection.commit()
 
 
 def create_tables(connection):
+    """Luo tietokantataulut.
+
+    Args:
+        connection: Tietokantayhteyden Connection-olio
+    """
+
     cursor = connection.cursor()
 
-    cursor.execute('''
+    cursor.execute("""
         create table users (
             username text primary key
         );
-    ''')
-
+    """)
 
     connection.commit()
 
 
 def initialize_database():
+
     connection = get_database_connection()
 
     drop_tables(connection)

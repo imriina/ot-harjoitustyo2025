@@ -20,8 +20,9 @@ class RegisterView:
     def _create_user_to_db(self):
         username = self._username_entry.get()
 
-        diary_service.create_new_user(username)
-        self._handle_create_user()
+        if username.strip():
+            diary_service.create_new_user(username)
+            self._handle_register()
     
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
@@ -32,7 +33,7 @@ class RegisterView:
         register_button = ttk.Button(
             master=self._frame,
             text="Luo käyttäjä",
-            command=self._handle_register
+            command=self._create_user_to_db
         )
 
         back_button = ttk.Button(

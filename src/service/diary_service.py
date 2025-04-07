@@ -16,8 +16,11 @@ class DiaryService:
     
     def create_new_user(self, username):
         user = self._user_repository.create(User(username))
-
+        self._user = user
         return user
+
+    def get_logged_in_username(self):
+        return self._user.username
 
     def login(self, username):
         
@@ -27,5 +30,8 @@ class DiaryService:
 
         self._user = user        
         return user
+
+    def logout(self):
+        self._user = None
 
 diary_service = DiaryService()

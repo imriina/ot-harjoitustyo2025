@@ -21,7 +21,7 @@ class LoginView:
 
     def pack(self):
         """Näyttää ikkunan
-        """        
+        """
         self._frame.pack(fill=constants.BOTH, expand=True)
 
     def destroy(self):

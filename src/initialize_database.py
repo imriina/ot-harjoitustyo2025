@@ -14,6 +14,10 @@ def drop_tables(connection):
         drop table if exists users;
     """)
 
+    cursor.execute("""
+        drop table if exists posts;            
+    """)
+
     connection.commit()
 
 
@@ -29,6 +33,15 @@ def create_tables(connection):
     cursor.execute("""
         create table users (
             username text primary key
+        );
+    """)
+
+    cursor.execute("""
+        CREATE TABLE posts (
+            user_id TEXT NOT NULL,
+            message TEXT NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (user_id) REFERENCES users(username)
         );
     """)
 

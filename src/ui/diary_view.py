@@ -2,6 +2,8 @@ from tkinter import ttk, constants
 from service.diary_service import diary_service
 
 class DiaryView:
+    """Näkymä jossa voit luoda ja katsoa päiväkirja postauksia
+    """
     def __init__(self, root, handle_logout):
         self._root = root
         self._handle_logout = handle_logout
@@ -11,6 +13,8 @@ class DiaryView:
         self._initialize()
 
     def pack(self):
+        """Näyttää ikkunan
+        """
         self._frame.pack(fill=constants.X)
 
     def destroy(self):

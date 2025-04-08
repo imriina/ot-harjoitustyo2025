@@ -1,13 +1,13 @@
-from ui.ui import UI
 from tkinter import Tk
+from ui.ui import UI
 
 def main():
     window = Tk()
 
     window.title("Päiväkirja")
 
-    ui = UI(window)
-    ui.start()
+    ui_screen = UI(window)
+    ui_screen.start()
     window.configure(cursor="heart")
     window.mainloop()
 

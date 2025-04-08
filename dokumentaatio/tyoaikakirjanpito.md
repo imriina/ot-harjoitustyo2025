@@ -18,3 +18,6 @@ Käytetty aika: 4h
 Alko vihdoin sujumaan! Jee! Sain vihdoin databasen 100% toimimaan -> rekisteröinti toimii oikein. Tein kirjautumisen, toimii! Ulos kirjautuminen toimii. Päiväkirjasivulle ei pääse kirjautumatta, ja siellä sinua tervehditään käyttäjänimelläsi. Työstin/testailin ulkonäköä.
 
 -----------------------------------------------------------------------------------------------
+
+Päivä: 8.4
+10.20

@@ -42,4 +42,3 @@ class UI:
         self._clear_current_view()
         self._current_view = DiaryView(self._root, self._show_main_view)
         self._current_view.pack()
-

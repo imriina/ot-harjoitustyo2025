@@ -10,6 +10,7 @@ Teen päiväkirjaohelmaa, johon voi kertoa päivästään ja katselemaan menneis
 
 [Työaikakirjanpito](https://github.com/imriina/ot-harjoitustyo2025/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
+[Changelog](https://github.com/imriina/ot-harjoitustyo2025/blob/main/dokumentaatio/changelog.md)
 
 
 Seuraa ohje esimerkkisovelluksesta:

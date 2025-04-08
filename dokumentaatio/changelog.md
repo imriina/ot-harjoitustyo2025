@@ -12,4 +12,5 @@
 - Käyttäjälle voi kirjautua
 - Testattu UserRepository
 - Tehty PostRepository ja entity postauksille
+- Tehty database postauksille
 - Käyttäjä voi tehdä postauksen

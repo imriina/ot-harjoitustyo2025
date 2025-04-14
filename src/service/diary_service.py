@@ -43,4 +43,8 @@ class DiaryService:
     def create_post(self, message):
         self._post_repository.create(self._user.username, message) 
 
+    def get_posts(self):
+        return self._post_repository.find_post_by_username(self._user.username)
+        
+
 diary_service = DiaryService()

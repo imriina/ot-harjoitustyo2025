@@ -20,5 +20,11 @@ Alko vihdoin sujumaan! Jee! Sain vihdoin databasen 100% toimimaan -> rekisteröi
 -----------------------------------------------------------------------------------------------
 
 Päivä: 8.4
-10.20-12
-13.10-
+Käytetty aika: 4h
+Tein uuden databasen postauksille, päivittelin ulkonäköä, tein testejä ja pylinttiä 
+
+-----------------------------------------------------------------------------------------------
+
+Päivä: 14.4
+Käytetty aika: 30min 15.22-
+

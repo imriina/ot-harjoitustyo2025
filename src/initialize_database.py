@@ -38,10 +38,10 @@ def create_tables(connection):
 
     cursor.execute("""
         CREATE TABLE posts (
-            user_id TEXT NOT NULL,
+            username TEXT NOT NULL,
             message TEXT NOT NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (user_id) REFERENCES users(username)
+            FOREIGN KEY (username) REFERENCES users(username)
         );
     """)
 

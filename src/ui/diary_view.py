@@ -1,4 +1,4 @@
-from tkinter import ttk, constants
+from tkinter import ttk, constants, END, Text
 from service.diary_service import diary_service
 
 class DiaryView:
@@ -9,6 +9,7 @@ class DiaryView:
         self._handle_logout = handle_logout
         self._frame = None
         self._username = None
+        self._post_display = None
 
         self._initialize()
 
@@ -21,10 +22,21 @@ class DiaryView:
         self._frame.destroy()
 
     def _send_post(self):
-        message = self._entry_message.get()  # Hakee tekstikentän sisällön
-        if message.strip():  # Estetään tyhjät viestit
-            diary_service.create_post(message)  # Tallennetaan kirjautuneen käyttäjän nimellä
+        message = self._entry_message.get()
+        if message.strip():
+            diary_service.create_post(message)
             self._entry_message.delete(0, constants.END)
+            self._update_post()
+
+    def _update_post(self):
+        posts = diary_service.get_posts() or []
+        self._post_display.config(state="normal")
+        self._post_display.delete("1.0", END)
+
+        for post in posts:
+            self._post_display.insert(END, f"{post.created_at} - {post.message}\n\n")
+
+        self._post_display.config(state="disabled")
 
     def logout(self):
         diary_service.logout()
@@ -50,8 +62,14 @@ class DiaryView:
             command=self.logout
         )
 
-        label.grid(row=0, column=0, pady=10)
-        sublabel.grid(row=1, column=0, pady=10)
-        self._entry_message.grid(row=2, column=0, pady=10)  # Tekstikenttä viestille
-        send_button.grid(row=3, column=0, pady=10)  # Lähetä-nappi
-        logout_button.grid(row=4, column=0, pady=20)
+        self._post_display = Text(master=self._frame, height=15, width=50)
+        self._post_display.config(state="disabled")
+
+        label.grid(row=0, column=0, pady=5)
+        sublabel.grid(row=1, column=0, pady=5)
+        self._entry_message.grid(row=2, column=0, pady=5)
+        send_button.grid(row=3, column=0, pady=5)
+        self._post_display.grid(row=4, column=0, pady=10)
+        logout_button.grid(row=5, column=0, pady=10)
+
+        self._update_post()

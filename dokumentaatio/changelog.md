@@ -14,3 +14,7 @@
 - Tehty PostRepository ja entity postauksille
 - Tehty database postauksille
 - Käyttäjä voi tehdä postauksen
+
+## Viikko 5
+
+- Käyttäjä näkee tehneensä postaukset

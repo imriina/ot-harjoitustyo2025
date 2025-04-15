@@ -19,3 +19,4 @@
 
 - Käyttäjä näkee tehneensä postaukset
 - Ulkonäköä samanlaiseksi kaikkialla
+- Postauksia voi poistaa

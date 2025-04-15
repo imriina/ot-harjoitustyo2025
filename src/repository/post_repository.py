@@ -2,7 +2,7 @@ from database_connection import get_database_connection
 from entities.post import Diary
 
 def get_post_by_row(row):
-    return Diary(row["username"], row["message"], row["created_at"]) if row else None
+    return Diary(row["post_id"], row["username"], row["message"], row["created_at"]) if row else None
 
 class PostRepository:
     """Käyttäjiin liittyvistä tietokantaoperaatioista vastaava luokka.
@@ -46,5 +46,15 @@ class PostRepository:
             return []
 
         return [get_post_by_row(row) for row in rows]
+
+    def delete_post(self, post_id):
+        cursor = self._connection.cursor()
+        cursor.execute(
+            "DELETE FROM posts WHERE post_id = ?",
+            (post_id,)
+        )
+        self._connection.commit()
+
+
 
 post_repository = PostRepository(get_database_connection())

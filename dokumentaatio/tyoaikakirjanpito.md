@@ -21,10 +21,16 @@ Alko vihdoin sujumaan! Jee! Sain vihdoin databasen 100% toimimaan -> rekisteröi
 
 Päivä: 8.4
 Käytetty aika: 4h
-Tein uuden databasen postauksille, päivittelin ulkonäköä, tein testejä ja pylinttiä 
+Tein uuden databasen postauksille, päivittelin ulkonäköä, tein testejä ja pylinttiä
 
 -----------------------------------------------------------------------------------------------
 
 Päivä: 14.4
-Käytetty aika: 30min 15.22-
+Käytetty aika: 2h
+Käyttäjän tekemät postaukset näkyy nyt diary viewissä. Lisäsin poisto napin - ei vielä toiminnallisuutta. Tein ulkonäköä yhtenäiseksi.
 
+-----------------------------------------------------------------------------------------------
+
+Päivä: 15.4
+Käytetty aika: 2h
+Postauksia voi poistaa! Jipii! Vaihtelin kans värejä ja fontteja. Kaikki sivut on samantyyppisiä nyt. 

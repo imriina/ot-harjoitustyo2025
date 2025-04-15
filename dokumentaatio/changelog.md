@@ -18,3 +18,4 @@
 ## Viikko 5
 
 - Käyttäjä näkee tehneensä postaukset
+- Ulkonäköä samanlaiseksi kaikkialla

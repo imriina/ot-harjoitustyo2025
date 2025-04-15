@@ -15,7 +15,7 @@ def drop_tables(connection):
     """)
 
     cursor.execute("""
-        drop table if exists posts;            
+        drop table if exists posts;
     """)
 
     connection.commit()
@@ -38,6 +38,7 @@ def create_tables(connection):
 
     cursor.execute("""
         CREATE TABLE posts (
+            post_id INTEGER PRIMARY KEY AUTOINCREMENT,
             username TEXT NOT NULL,
             message TEXT NOT NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

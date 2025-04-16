@@ -6,6 +6,10 @@ htmlcov
 __pycache__
 *.py[cod]
 *$py.class
+.env
+.pylintrc
+poetry.lock
+__init__.py
 
 # data files
 data/database.sqlite

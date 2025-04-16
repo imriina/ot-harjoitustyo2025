@@ -2,7 +2,7 @@ Pikku päiväkirja mihin voi lisätä postauksen josta tulee ilmi päivämäär�
 - Pystyy luomaan käyttäjän käyttäjänimellä CHECK
 - Pystyy kirjautumaan käyttäjänimellä CHECK
 - Pystyy tekemään postauksen sivulle CHECK
-- Voi poistaa postauksen
+- Voi poistaa postauksen CHECK
 - Voi kirjautua ulos CHECK
 
 Kehitysideat:

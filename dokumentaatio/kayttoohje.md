@@ -3,13 +3,18 @@ Lataa projektin viimeisimmän [releasen]() lähdekoodi valitsemalla _Assets_-osi
 ## Käynnistys ##
 
 Asennetaan riippuvuudet:
-- **poetry install**
-Siirrytään virtuaaliympäristöön:
-- **poetry shell**
+```bash
+poetry install
+```
 Alustetaan sovellus:
-- **poetry run invoke build**
+```bash
+poetry run invoke build
+```
 Käynnistetään ohjelma:
-- **poetry run invoke build**
+```
+poetry run invoke start
+```
+
 
 ## Sovelluksen käyttö ##
 Sovellus käynnistyy aloitusnäkymään, josta voit siirtyä luomaan käyttäjän tai kirjautumaan sisään.

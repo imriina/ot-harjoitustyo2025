@@ -20,3 +20,9 @@
 - Käyttäjä näkee tehneensä postaukset
 - Ulkonäköä samanlaiseksi kaikkialla
 - Postauksia voi poistaa
+
+## Viikko 7
+
+- Error viesti tulee
+- Testit tehty
+- Pylint ei ongelmia

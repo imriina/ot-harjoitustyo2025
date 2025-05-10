@@ -34,3 +34,10 @@ Käyttäjän tekemät postaukset näkyy nyt diary viewissä. Lisäsin poisto nap
 Päivä: 15.4
 Käytetty aika: 2h
 Postauksia voi poistaa! Jipii! Vaihtelin kans värejä ja fontteja. Kaikki sivut on samantyyppisiä nyt. 
+
+-----------------------------------------------------------------------------------------------
+
+Päivä: 10.5
+Käytetty aika: 3h
+Tein viimeiset testit ja hion asioita loppupalautukseen. Väärästä käyttäjänimestä tulee nyt ilmoitus sovelluksessa. 
+

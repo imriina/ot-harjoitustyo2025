@@ -29,6 +29,8 @@ class DiaryView:
         self._frame.pack(fill=constants.BOTH, expand=True)
 
     def destroy(self):
+        """Tuhoaa ikkunan
+        """
         self._frame.destroy()
 
     def _send_post(self):

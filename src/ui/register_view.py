@@ -51,7 +51,7 @@ class RegisterView:
 
         label = ttk.Label(
             master=self._frame,
-            text="Register Page",
+            text="Rekisteröinti",
             font=("Fixedsys",18, "bold"),
             background="PaleVioletRed1")
 

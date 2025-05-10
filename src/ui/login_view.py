@@ -41,7 +41,10 @@ class LoginView:
             diary_service.login(username)
             self._handle_login()
         except InvalidCredentialsError:
-            self._show_error("Invalid username or password")
+            self._show_error("Virheellinen käyttäjänimi")
+
+    def _show_error(self, message):
+        self._error_label.config(text=message)
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root, style="Custom.TFrame")
@@ -54,7 +57,7 @@ class LoginView:
 
         label = ttk.Label(
             master=self._frame,
-            text="Login Page",
+            text="Kirjautuminen",
             font=("Fixedsys",18, "bold"),
             background="PaleVioletRed1")
 
@@ -85,7 +88,16 @@ class LoginView:
             style="Custom.TButton"
         )
 
+        self._error_label = ttk.Label(
+            master=self._frame,
+            text="",
+            foreground="red",
+            background="PaleVioletRed1",
+            font=("Fixedsys", 11)
+        )
+
         self._username_login.grid(row=0, column=1, padx=(5, 10), sticky="w")
         label.grid(row=0, column=0, pady=20, sticky="n")
         login_button.grid(row=3, column=0, pady=10, ipadx=100, ipady=10, sticky="n")
         back_button.grid(row=4, column=0, pady=10, ipadx=114, ipady=10, sticky="n")
+        self._error_label.grid(row=2, column=0)

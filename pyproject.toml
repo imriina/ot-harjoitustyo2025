@@ -4,6 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["Riina Immonen <riina.immonen@helsinki.fi>"]
 readme = "README.md"
+packages = [
+    { include = "src" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -19,3 +22,4 @@ pylint = "^3.3.6"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+

@@ -28,6 +28,8 @@ class MainView:
         self._frame.pack(fill=constants.BOTH, expand=True)
 
     def destroy(self):
+        """Tuhoaa ikkunan
+        """
         self._frame.destroy()
 
     def _initialize(self):

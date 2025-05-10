@@ -24,6 +24,19 @@ class PostRepository:
         )
         self._connection.commit()
 
+    def find_all(self):
+        """Palauttaa kaikki postaukset tietokannasta.
+
+        Returns:
+            Lista Diary-olioita uusimmasta vanhimpaan
+        """
+        cursor = self._connection.cursor()
+
+        cursor.execute("SELECT * FROM posts ORDER BY created_at DESC")
+        rows = cursor.fetchall()
+
+        return [get_post_by_row(row) for row in rows]
+
     def find_post_by_username(self, username):
         """Löytää käyttäjän postaukset tietokannasta käyttäjänimellä
 
@@ -48,6 +61,11 @@ class PostRepository:
         return [get_post_by_row(row) for row in rows]
 
     def delete_post(self, post_id):
+        """Poistaa käyttäjän postauksen tietokannasta sen id:n perusteella
+
+        Args:
+            post_id: Postauksen id jota ollaan poistamassa
+        """
         cursor = self._connection.cursor()
         cursor.execute(
             "DELETE FROM posts WHERE post_id = ?",
@@ -55,6 +73,11 @@ class PostRepository:
         )
         self._connection.commit()
 
+    def delete_all(self):
+        """Poistaa kaikki postaukset tietokannasta."""
+        cursor = self._connection.cursor()
+        cursor.execute("DELETE FROM posts")
+        self._connection.commit()
 
 
 post_repository = PostRepository(get_database_connection())

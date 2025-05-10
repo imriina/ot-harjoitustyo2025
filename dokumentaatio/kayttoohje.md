@@ -1,5 +1,5 @@
 # Käyttöohje #
-Lataa projektin viimeisimmän [releasen]() lähdekoodi valitsemalla _Assets_-osion alta _Source code_.
+Lataa projektin viimeisimmän [releasen](https://github.com/imriina/ot-harjoitustyo2025/releases/tag/viikko7) lähdekoodi valitsemalla _Assets_-osion alta _Source code_.
 ## Käynnistys ##
 
 Asennetaan riippuvuudet:

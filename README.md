@@ -2,7 +2,7 @@
 
 ## Oma projekti
 
-Teen päiväkirjaohelmaa, johon voi kertoa päivästään ja katselemaan menneisyyten.
+Teen päiväkirjaohjelmaa, johon voi luoda kirjauksia päivistään.
 
 ## Dokumentaatio
 
@@ -11,6 +11,10 @@ Teen päiväkirjaohelmaa, johon voi kertoa päivästään ja katselemaan menneis
 [Työaikakirjanpito](https://github.com/imriina/ot-harjoitustyo2025/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 [Changelog](https://github.com/imriina/ot-harjoitustyo2025/blob/main/dokumentaatio/changelog.md)
+
+[Käyttöohje](https://github.com/imriina/ot-harjoitustyo2025/blob/main/dokumentaatio/kayttoohje.md)
+
+[Testaus](https://github.com/imriina/ot-harjoitustyo2025/blob/main/dokumentaatio/testaus.md)
 
 
 Seuraa ohje esimerkkisovelluksesta:
